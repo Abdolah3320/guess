@@ -15,7 +15,6 @@ body {
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
   background-color: #222;
-  /* background-color: #60b347; */
 }
 
 /* LAYOUT */
@@ -29,20 +28,14 @@ main {
   height: 65vh;
   color: #eee;
   display: flex;
+  flex-direction: column; /* Adjusted for responsiveness */
   align-items: center;
   justify-content: space-around;
 }
 
-.left {
-  width: 52rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+.left,
 .right {
-  width: 52rem;
-  font-size: 2rem;
+  width: 100%; /* Adjusted for responsiveness */
 }
 
 /* ELEMENTS STYLE */
@@ -51,7 +44,7 @@ h1 {
   text-align: center;
   position: absolute;
   width: 100%;
-  top: 52%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -69,17 +62,16 @@ h1 {
   transform: translate(-50%, 50%);
 }
 
-.between {
+.between,
+.again {
   font-size: 1.4rem;
   position: absolute;
-  top: 2rem;
   right: 2rem;
 }
 
 .again {
-  position: absolute;
   top: 2rem;
-  left: 2rem;
+  left: unset;
 }
 
 .guess {
@@ -89,8 +81,8 @@ h1 {
   color: inherit;
   font-size: 5rem;
   padding: 2.5rem;
-  width: 25rem;
-  text-align: center;
+  width: 80%; /* Adjusted for responsiveness */
+  margin: 0 auto; /* Center the input */
   display: block;
   margin-bottom: 3rem;
 }
@@ -110,10 +102,23 @@ h1 {
 }
 
 .message {
-  margin-bottom: 8rem;
-  height: 3rem;
+  margin-bottom: 2rem; /* Adjusted for responsiveness */
 }
 
-.label-score {
-  margin-bottom: 2rem;
+.label-score,
+.label-highscore {
+  margin-bottom: 1rem; /* Adjusted for responsiveness */
+}
+
+/* Media queries for responsiveness */
+@media only screen and (min-width: 600px) {
+  /* Adjust styles for screens wider than 600px */
+  .left,
+  .right {
+    width: 50%;
+  }
+
+  .number {
+    width: 20rem;
+  }
 }
