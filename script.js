@@ -5,7 +5,7 @@ let secretNumber, attempts, hightScore;
 function resetGame() {
   secretNumber = Math.floor(Math.random() * 20 + 1);
   document.querySelector('.number').textContent = '?';
-  attempts = 20;
+  attempts = 5;
   document.querySelector('.score').textContent = attempts;
   document.querySelector('.message').textContent = 'Start guessing...';
   document.querySelector('body').style.backgroundColor ="#222"
