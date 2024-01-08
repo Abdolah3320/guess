@@ -43,6 +43,7 @@ function resetGame() {
   attempts = 20;
   document.querySelector('.score').textContent = attempts;
   document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('body').style.backgroundColor ="#222"
 }
 resetGame();
 
